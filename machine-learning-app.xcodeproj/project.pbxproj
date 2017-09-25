@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		3A44F1C01F798C56009BF8C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44F1BF1F798C56009BF8C4 /* AppDelegate.swift */; };
-		3A44F1C21F798C56009BF8C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44F1C11F798C56009BF8C4 /* ViewController.swift */; };
+		3A44F1C21F798C56009BF8C4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44F1C11F798C56009BF8C4 /* CameraViewController.swift */; };
 		3A44F1C51F798C56009BF8C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A44F1C31F798C56009BF8C4 /* Main.storyboard */; };
 		3A44F1C71F798C56009BF8C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A44F1C61F798C56009BF8C4 /* Assets.xcassets */; };
 		3A44F1CA1F798C56009BF8C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A44F1C81F798C56009BF8C4 /* LaunchScreen.storyboard */; };
+		3A44F1D51F799364009BF8C4 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44F1D41F799364009BF8C4 /* RoundedShadowView.swift */; };
+		3A44F1D71F799553009BF8C4 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44F1D61F799553009BF8C4 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A44F1BC1F798C56009BF8C4 /* machine-learning-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "machine-learning-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A44F1BF1F798C56009BF8C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A44F1C11F798C56009BF8C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A44F1C11F798C56009BF8C4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3A44F1C41F798C56009BF8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A44F1C61F798C56009BF8C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A44F1C91F798C56009BF8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A44F1CB1F798C56009BF8C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A44F1D41F799364009BF8C4 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		3A44F1D61F799553009BF8C4 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		3A44F1BE1F798C56009BF8C4 /* machine-learning-app */ = {
 			isa = PBXGroup;
 			children = (
+				3A44F1D31F799041009BF8C4 /* Resources */,
+				3A44F1D21F799033009BF8C4 /* Views */,
+				3A44F1D11F799026009BF8C4 /* Controllers */,
 				3A44F1BF1F798C56009BF8C4 /* AppDelegate.swift */,
-				3A44F1C11F798C56009BF8C4 /* ViewController.swift */,
 				3A44F1C31F798C56009BF8C4 /* Main.storyboard */,
 				3A44F1C61F798C56009BF8C4 /* Assets.xcassets */,
 				3A44F1C81F798C56009BF8C4 /* LaunchScreen.storyboard */,
 				3A44F1CB1F798C56009BF8C4 /* Info.plist */,
 			);
 			path = "machine-learning-app";
+			sourceTree = "<group>";
+		};
+		3A44F1D11F799026009BF8C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A44F1C11F798C56009BF8C4 /* CameraViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A44F1D21F799033009BF8C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A44F1D41F799364009BF8C4 /* RoundedShadowView.swift */,
+				3A44F1D61F799553009BF8C4 /* RoundedButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A44F1D31F799041009BF8C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A44F1C21F798C56009BF8C4 /* ViewController.swift in Sources */,
+				3A44F1C21F798C56009BF8C4 /* CameraViewController.swift in Sources */,
 				3A44F1C01F798C56009BF8C4 /* AppDelegate.swift in Sources */,
+				3A44F1D51F799364009BF8C4 /* RoundedShadowView.swift in Sources */,
+				3A44F1D71F799553009BF8C4 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

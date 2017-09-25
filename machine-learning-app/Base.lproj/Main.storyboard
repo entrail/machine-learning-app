@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="machine_learning_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEm-DU-hTg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-Lh-Qf5" customClass="RoundedShadowView" customModule="machine_learning_app" customModuleProvider="target">
+                                <rect key="frame" x="20" y="50" width="335" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wgP-VS-tnd">
+                                        <rect key="frame" x="8" y="8" width="319" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The name of the detected item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="PAN-Jd-vMe">
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="29"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Confidence: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8X-tE-K9k">
+                                                <rect key="frame" x="0.0" y="29" width="319" height="15"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wgP-VS-tnd" firstAttribute="top" secondItem="5dW-Lh-Qf5" secondAttribute="top" constant="8" id="5WI-FZ-hQI"/>
+                                    <constraint firstAttribute="height" constant="60" id="8mj-A2-w1l"/>
+                                    <constraint firstAttribute="bottom" secondItem="wgP-VS-tnd" secondAttribute="bottom" constant="8" id="Y1x-j3-3Ji"/>
+                                    <constraint firstItem="wgP-VS-tnd" firstAttribute="leading" secondItem="5dW-Lh-Qf5" secondAttribute="leading" constant="8" id="agK-J0-2aE"/>
+                                    <constraint firstAttribute="trailing" secondItem="wgP-VS-tnd" secondAttribute="trailing" constant="8" id="nc4-ZA-7b3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlI-mG-dHe" customClass="RoundedButton" customModule="machine_learning_app" customModuleProvider="target">
+                                <rect key="frame" x="20" y="611" width="111" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="FLASH OFF">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHk-kY-u07">
+                                <rect key="frame" x="282" y="507" width="73" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="JBh-cZ-YOD"/>
+                                    <constraint firstAttribute="height" constant="140" id="qrr-jm-ztt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MHk-kY-u07" secondAttribute="bottom" constant="20" id="0ap-sl-7Sa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RlI-mG-dHe" secondAttribute="bottom" constant="20" id="0w7-Q7-X46"/>
+                            <constraint firstItem="RlI-mG-dHe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1fy-wA-thN"/>
+                            <constraint firstItem="5dW-Lh-Qf5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3xn-Bz-rig"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5dW-Lh-Qf5" secondAttribute="trailing" constant="20" id="9ge-fS-UCq"/>
+                            <constraint firstItem="jEm-DU-hTg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B3P-gt-Es6"/>
+                            <constraint firstItem="MHk-kY-u07" firstAttribute="width" secondItem="jEm-DU-hTg" secondAttribute="height" multiplier="73:667" id="CQP-5c-g1J"/>
+                            <constraint firstItem="jEm-DU-hTg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FYd-3L-NvA"/>
+                            <constraint firstItem="5dW-Lh-Qf5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LYd-hH-LDQ"/>
+                            <constraint firstItem="jEm-DU-hTg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T0t-cP-zbv"/>
+                            <constraint firstItem="jEm-DU-hTg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZDW-la-Xbh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MHk-kY-u07" secondAttribute="trailing" constant="20" id="kVW-5L-Yt5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraView" destination="jEm-DU-hTg" id="cbL-eg-DCM"/>
+                        <outlet property="captureImageView" destination="MHk-kY-u07" id="sDW-0l-ojp"/>
+                        <outlet property="capturedItemLbl" destination="PAN-Jd-vMe" id="gmw-CU-pFV"/>
+                        <outlet property="confidenceLbl" destination="H8X-tE-K9k" id="FbT-iC-LQn"/>
+                        <outlet property="flashBtn" destination="RlI-mG-dHe" id="Kzz-zS-nm9"/>
+                        <outlet property="headerView" destination="5dW-Lh-Qf5" id="Hj1-h8-JIU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
