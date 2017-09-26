@@ -44,6 +44,7 @@ class CameraViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        flashBtn.setBackgroundImage(UIImage(named: "flash_off"), for: .normal)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapCameraView))
         tap.numberOfTapsRequired = 1
@@ -110,9 +111,11 @@ class CameraViewController: UIViewController {
         switch flashControlState {
         case .off:
             flashBtn.setTitle("Flash On", for: .normal)
+            //flashBtn.setBackgroundImage(UIImage(named: "flash_on.png"), for: .normal)
             flashControlState = .on
         case .on:
             flashBtn.setTitle("Flash Off", for: .normal)
+            //flashBtn.setBackgroundImage(UIImage(named: "flash_off.png"), for: .normal)
             flashControlState = .off
         }
     }

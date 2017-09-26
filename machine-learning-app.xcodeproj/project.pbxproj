@@ -14,6 +14,10 @@
 		3A44F1CA1F798C56009BF8C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A44F1C81F798C56009BF8C4 /* LaunchScreen.storyboard */; };
 		3A44F1D51F799364009BF8C4 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44F1D41F799364009BF8C4 /* RoundedShadowView.swift */; };
 		3A44F1D71F799553009BF8C4 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44F1D61F799553009BF8C4 /* RoundedButton.swift */; };
+		3A7A2C211F7AE841004FB7BD /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A2C1D1F7AE840004FB7BD /* VGG16.mlmodel */; };
+		3A7A2C221F7AE841004FB7BD /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A2C1E1F7AE841004FB7BD /* MobileNet.mlmodel */; };
+		3A7A2C231F7AE841004FB7BD /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A2C1F1F7AE841004FB7BD /* Inceptionv3.mlmodel */; };
+		3A7A2C241F7AE841004FB7BD /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A2C201F7AE841004FB7BD /* Resnet50.mlmodel */; };
 		3AEB83361F7AA38700BB65EA /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB83351F7AA38700BB65EA /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		3A44F1CB1F798C56009BF8C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A44F1D41F799364009BF8C4 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		3A44F1D61F799553009BF8C4 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		3A7A2C1D1F7AE840004FB7BD /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = VGG16.mlmodel; path = ../../../../../Users/Adrian/Downloads/VGG16.mlmodel; sourceTree = "<group>"; };
+		3A7A2C1E1F7AE841004FB7BD /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNet.mlmodel; path = ../../../../../Users/Adrian/Downloads/MobileNet.mlmodel; sourceTree = "<group>"; };
+		3A7A2C1F1F7AE841004FB7BD /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../../Users/Adrian/Downloads/Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		3A7A2C201F7AE841004FB7BD /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../Users/Adrian/Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		3AEB83351F7AA38700BB65EA /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +68,10 @@
 		3A44F1BE1F798C56009BF8C4 /* machine-learning-app */ = {
 			isa = PBXGroup;
 			children = (
+				3A7A2C1F1F7AE841004FB7BD /* Inceptionv3.mlmodel */,
+				3A7A2C1E1F7AE841004FB7BD /* MobileNet.mlmodel */,
+				3A7A2C201F7AE841004FB7BD /* Resnet50.mlmodel */,
+				3A7A2C1D1F7AE840004FB7BD /* VGG16.mlmodel */,
 				3AEB83351F7AA38700BB65EA /* SqueezeNet.mlmodel */,
 				3A44F1D31F799041009BF8C4 /* Resources */,
 				3A44F1D21F799033009BF8C4 /* Views */,
@@ -170,8 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A44F1C21F798C56009BF8C4 /* CameraViewController.swift in Sources */,
+				3A7A2C241F7AE841004FB7BD /* Resnet50.mlmodel in Sources */,
 				3A44F1C01F798C56009BF8C4 /* AppDelegate.swift in Sources */,
+				3A7A2C211F7AE841004FB7BD /* VGG16.mlmodel in Sources */,
 				3AEB83361F7AA38700BB65EA /* SqueezeNet.mlmodel in Sources */,
+				3A7A2C221F7AE841004FB7BD /* MobileNet.mlmodel in Sources */,
+				3A7A2C231F7AE841004FB7BD /* Inceptionv3.mlmodel in Sources */,
 				3A44F1D51F799364009BF8C4 /* RoundedShadowView.swift in Sources */,
 				3A44F1D71F799553009BF8C4 /* RoundedButton.swift in Sources */,
 			);

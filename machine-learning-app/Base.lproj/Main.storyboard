@@ -26,7 +26,23 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEm-DU-hTg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlI-mG-dHe" customClass="RoundedButton" customModule="machine_learning_app" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="613" width="73" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Flash Off">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="flashBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQh-he-0zi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RlI-mG-dHe" secondAttribute="bottom" constant="20" id="2Ut-np-uYV"/>
+                                    <constraint firstItem="RlI-mG-dHe" firstAttribute="leading" secondItem="jEm-DU-hTg" secondAttribute="leading" constant="20" id="Xif-x9-1gH"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-Lh-Qf5" customClass="RoundedShadowView" customModule="machine_learning_app" customModuleProvider="target">
                                 <rect key="frame" x="20" y="50" width="335" height="60"/>
@@ -58,17 +74,6 @@
                                     <constraint firstAttribute="trailing" secondItem="wgP-VS-tnd" secondAttribute="trailing" constant="8" id="nc4-ZA-7b3"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlI-mG-dHe" customClass="RoundedButton" customModule="machine_learning_app" customModuleProvider="target">
-                                <rect key="frame" x="20" y="611" width="111" height="36"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="FLASH OFF">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="flashBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQh-he-0zi"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHk-kY-u07">
                                 <rect key="frame" x="282" y="507" width="73" height="140"/>
                                 <constraints>
@@ -80,8 +85,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MHk-kY-u07" secondAttribute="bottom" constant="20" id="0ap-sl-7Sa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RlI-mG-dHe" secondAttribute="bottom" constant="20" id="0w7-Q7-X46"/>
-                            <constraint firstItem="RlI-mG-dHe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1fy-wA-thN"/>
                             <constraint firstItem="5dW-Lh-Qf5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3xn-Bz-rig"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5dW-Lh-Qf5" secondAttribute="trailing" constant="20" id="9ge-fS-UCq"/>
                             <constraint firstItem="jEm-DU-hTg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B3P-gt-Es6"/>
