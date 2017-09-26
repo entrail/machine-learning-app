@@ -65,6 +65,9 @@
                                 <state key="normal" title="FLASH OFF">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flashBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQh-he-0zi"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHk-kY-u07">
                                 <rect key="frame" x="282" y="507" width="73" height="140"/>

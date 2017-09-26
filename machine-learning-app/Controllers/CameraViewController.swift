@@ -11,6 +11,11 @@ import AVFoundation // used for camera
 import CoreML
 import Vision
 
+enum FlashState {
+    case off
+    case on
+}
+
 class CameraViewController: UIViewController {
     
     var captureSession: AVCaptureSession!
@@ -18,6 +23,7 @@ class CameraViewController: UIViewController {
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     var photoData: Data?
+    var flashControlState: FlashState = .off
     
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var captureImageView: UIImageView!
@@ -29,7 +35,6 @@ class CameraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -75,6 +80,12 @@ class CameraViewController: UIViewController {
         
         settings.previewPhotoFormat = settings.embeddedThumbnailPhotoFormat
         
+        if flashControlState == .off {
+            settings.flashMode = .off
+        } else {
+            settings.flashMode = .on
+        }
+        
         cameraOutput.capturePhoto(with: settings, delegate: self)
         
     }
@@ -95,6 +106,17 @@ class CameraViewController: UIViewController {
         }
     }
   
+    @IBAction func flashBtnPressed(_ sender: Any) {
+        switch flashControlState {
+        case .off:
+            flashBtn.setTitle("Flash On", for: .normal)
+            flashControlState = .on
+        case .on:
+            flashBtn.setTitle("Flash Off", for: .normal)
+            flashControlState = .off
+        }
+    }
+    
     
 }
 
